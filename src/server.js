@@ -82,7 +82,10 @@ const server = http.createServer(app);
 // ================== SOCKET ==================
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://rentify-frontend-umber.vercel.app",
+    ],
     credentials: true,
   },
 });
@@ -176,10 +179,10 @@ const startServer = async () => {
       );
     });
   } catch (error) {
-   toast.error(
-    err.response?.data?.error ||
-    "Server failed to start"
-  );
+    console.error(
+      "Server failed to start:",
+      error.message
+    );
     process.exit(1);
   }
 };
