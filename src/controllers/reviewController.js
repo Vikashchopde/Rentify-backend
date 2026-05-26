@@ -1,4 +1,4 @@
-import Listing from "../models/Listing.js";
+import Listing from "../models/listing.js";
 
 export const addReview = async (req, res) => {
     try {
