@@ -33,7 +33,10 @@ connectDB();
 // ================== MIDDLEWARE ==================
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://rentify-frontend-umber.vercel.app",
+    ],
     credentials: true,
   })
 );
