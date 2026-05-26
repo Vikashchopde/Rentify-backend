@@ -1,5 +1,5 @@
 // src/middleware/requireRole.js
-import User from "../models/User.js";
+import User from "../models/user.js";
 
 export default function requireRole(requiredRole) {
   return (req, res, next) => {
