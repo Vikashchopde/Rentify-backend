@@ -6,12 +6,12 @@ import { addReview,updateReview,deleteReview } from "../controllers/reviewContro
 const router = express.Router();
 
 // ADD REVIEW
-router.post("/:listingId",auth,requireSameUser ,addReview);
+router.post("/:listingId",auth,addReview);
 
 // UPDATE REVIEW
-router.put("/:listingId/:reviewId",auth,requireSameUser ,updateReview);
+router.put("/:listingId/:reviewId",auth,updateReview);
 
 // DELETE REVIEW
-router.delete("/:listingId/:reviewId", auth, requireSameUser,deleteReview);
+router.delete("/:listingId/:reviewId", auth,deleteReview);
 
 export default router;
