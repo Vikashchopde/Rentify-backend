@@ -36,8 +36,10 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://rentify-frontend-umber.vercel.app",
+  "https://rentify-frontend-umber.vercel.app",
+  "https://rentify-frontend-189cxw0bz-vikashchopdes-projects.vercel.app",
     ],
+    origin: true,
     credentials: true,
   })
 );
