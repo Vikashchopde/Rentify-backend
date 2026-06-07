@@ -23,11 +23,12 @@ import profileRoutes from "./routes/profile.js";
 
 dotenv.config();
 
-// ================== APP ==================
 const app = express();
+
+app.set("trust proxy", 1);
+
 const __dirname = path.resolve();
 
-// ================== DB ==================
 connectDB();
 
 // ================== MIDDLEWARE ==================
